@@ -5,13 +5,14 @@ import { getAuth } from 'firebase/auth';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBh0-7iLWX631s_BMNSk_Ex0oIOlQMst6o",
-  authDomain: "prueba-ed5c0.firebaseapp.com",
-  projectId: "prueba-ed5c0",
-  storageBucket: "prueba-ed5c0.appspot.com",
-  messagingSenderId: "378992150400",
-  appId: "1:378992150400:web:363ff6b6f0cc7d8b7a6365"
+  apiKey: "AIzaSyDS1tRrHEUif6FgXcj5b5Tc_IdXqEJ35qY",
+  authDomain: "proyecto-social-6c9d8.firebaseapp.com",
+  projectId: "proyecto-social-6c9d8",
+  storageBucket: "proyecto-social-6c9d8.appspot.com",
+  messagingSenderId: "579438480998",
+  appId: "1:579438480998:web:8a55fe39c69bf3d241e7a7"
 };
 
 // Initialize Firebase
