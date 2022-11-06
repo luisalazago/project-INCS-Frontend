@@ -1,0 +1,21 @@
+.navbar {
+    background-color: #F3C95E !important;
+    color: black;
+    justify-content: center;
+}
+
+.bienvenido {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 3%;  
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.blogout {
+    padding-right: 3%;
+}
