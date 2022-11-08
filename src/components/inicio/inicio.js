@@ -2,7 +2,6 @@ import { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Form } from "react-router-dom";
 import "./inicio.css";
 
 class Inicio extends Component {
@@ -37,6 +36,12 @@ class Inicio extends Component {
                                                 <Card.Text>
                                                     ¿Qué tipo de actividad desea ver?
                                                 </Card.Text>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Todas</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
                                             </Card.Body>
                                         </Card>
                                     </div>
