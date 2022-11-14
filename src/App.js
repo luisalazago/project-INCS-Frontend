@@ -3,8 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Login } from './components/login/login';
 import { Register } from './components/register/register';
 import { AuthProvider } from './context/authContext';
-import { Home } from './components/home/home';
 import { ProtectedRoute } from './components/proute/protectedRoute';
+import { Home } from './components/home/home';
 
 function App() {
   return(
