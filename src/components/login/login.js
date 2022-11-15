@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 import { Alert } from "../alert/alert";
+import axios from "axios";
+
 export function Login() {
     const [user, setUser] = useState({
         email:"",
@@ -11,6 +13,7 @@ export function Login() {
     const { login } = useAuth();
     const navigate = useNavigate();
     const [error, setError] = useState();
+    const url_get = "https://us-central1-atencion-conjunta-365122.cloudfunctions.net/get_all_users"
 
     const handleChange = ({target: {name, value}}) => {
         setUser({...user, [name]: value});
@@ -20,8 +23,27 @@ export function Login() {
         e.preventDefault();
         setError('');
         try {
-            await login(user.email, user.password);
-            navigate('/');
+            const response = await axios.get(url_get);
+            const data = (response.data.users)
+            const length = Object.keys(response.data.users).length;
+            let flag = false
+            let admin = true
+            for(var i = 0; i < length; i++){
+                if(user.email === data[i].email){
+                    if(user.password === data[i].password){
+                        flag = true
+                        if(data[i].role === "user"){
+                            admin = false
+                        }
+                    }
+                }
+            }
+            if(flag === true && admin === true){
+                navigate('/inicio');
+            }
+            else if(flag === true && admin === false){
+                navigate('/home');
+            }
         }
         catch (error) {
             setError(error.message);
