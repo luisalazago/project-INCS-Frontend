@@ -1,0 +1,14 @@
+Beto:
+	* Inicio Terapeuta.
+	* Creación de Actividades.
+	* Visualización del paciente.
+	* Visualización actividad específica como Terapeuta.
+
+Común:
+	* Visualización Actividad como paciente.
+
+Arango:
+	* Login.
+	* Creación de pacientes.
+	* Inicio Paciente.
+	* Visualización General de Actividades como Terapeuta.
