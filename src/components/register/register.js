@@ -9,6 +9,7 @@ export function Register() {
     const [user, setUser] = useState({
         rol:"",
         nombre:"",
+        apellido:"",
         email:"",
         password:""
     });
@@ -50,7 +51,12 @@ export function Register() {
                 <div className="mb-4">
                     <label htmlFor="nombre" className="block text-gray-700 text-sm font-fold mb-2 text-center">Nombre</label>
                     <input type="nombre" name="name" className="shadow appearance-none border rounded
-                    w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nombre-Apellido" onChange={handleChange}/>
+                    w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nombre" onChange={handleChange}/>
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="apellido" className="block text-gray-700 text-sm font-fold mb-2 text-center">Apellido</label>
+                    <input type="apellido" name="lastname" className="shadow appearance-none border rounded
+                    w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Apellido" onChange={handleChange}/>
                 </div>
                 <div className="mb-4">
                     <label htmlFor="email" className="block text-gray-700 text-sm font-fold mb-2 text-center">Correo</label>
