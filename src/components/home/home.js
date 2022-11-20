@@ -16,16 +16,27 @@ export function Home() {
     
     const temp = "admin";
     const [todos, setTodos] = useState();
-    const url_get = "https://us-central1-atencion-conjunta-365122.cloudfunctions.net/get_user_by_email?email=salarango9@gmail.com";
+    const [todos_usuarios, setTodosUsuarios] = useState();
+
+    const url_get = "https://us-central1-atencion-conjunta-365122.cloudfunctions.net/get_user_by_email?email=Nico123@gmail.com";
+    const url_get_users = "https://us-central1-atencion-conjunta-365122.cloudfunctions.net/get_all_users";
+
+    const getAllUsers = async () => {
+        const response = await fetch(url_get_users);
+        console.log("Estado Usuarios: " + response.status);
+        const responseJSON = await response.json();
+        setTodosUsuarios(responseJSON);
+        console.log(responseJSON);
+    };
     const getUser = async () => {
         const response = await fetch(url_get);
         console.log(response.status);
         const responseJSON = await response.json();
         setTodos(responseJSON);
-        console.log(responseJSON);
     };
     useEffect(() => {
         getUser();
+        getAllUsers();
     }, []);
 
     if (temp === "admin") {
@@ -33,7 +44,7 @@ export function Home() {
         return(
             <div className="home">
                 <NavBar usuario={!todos ? "" : todos.user.name} logOut={handleLogout}/>
-                <SideNavBar/>
+                <SideNavBar pacientes={!todos_usuarios ? "1" : todos_usuarios.users}/>
                 <Routes>
                     <Route path="/" element={<Inicio/>}/>
                 </Routes>

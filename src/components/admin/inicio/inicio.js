@@ -2,10 +2,13 @@ import { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Route, Routes, useHistory } from "react-router-dom";
+import CrearActiviades from "../crear_actividades/crear_actividades";
 import "./inicio.css";
 
 class Inicio extends Component {
     render() {
+        const history = useHistory();
         return(
             <div className="inicio">
                 <h1>¿Qué desea hacer?</h1>
@@ -20,7 +23,7 @@ class Inicio extends Component {
                                 descrito oprima el botón de abajo.
                             </Card.Text>
                             <div className="centrarbc1">
-                                <Button variant="primary" className="bc1">Crear Actividades</Button>
+                                <Button variant="primary" className="bc1" onClick={() => history.push("/crear_actividades")}>Crear Actividades</Button>
                             </div>
                         </Card.Body>
                     </Card>
@@ -37,10 +40,10 @@ class Inicio extends Component {
                                                     ¿Qué tipo de actividad desea ver?
                                                 </Card.Text>
                                                 <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Todas</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
+                                                    <option selected value="0">Todas</option>
+                                                    <option value="1">Fácil</option>
+                                                    <option value="2">Intermedio</option>
+                                                    <option value="3">Difícil</option>
                                                 </select>
                                             </Card.Body>
                                         </Card>
@@ -55,6 +58,9 @@ class Inicio extends Component {
                         </Card.Body>
                     </Card>
                 </div>
+                <Routes>
+                    <Route path="/crear_actividades" element={<CrearActiviades/>}/>
+                </Routes>
             </div>
         );
     }

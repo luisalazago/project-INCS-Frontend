@@ -3,8 +3,6 @@ import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import "./sidebar.css";
 
 import SideNav, {
-  Toggle,
-  Nav,
   NavItem,
   NavIcon,
   NavText
@@ -19,32 +17,42 @@ class SideNavBar extends React.Component {
   }
 
   render() {
-    return (
-      <SideNav expanded={this.state.isVisible} className="sidenavbar">
-        <SideNav.Toggle
-          onClick={() => {
-            this.setState({ isVisible: !this.state.isVisible });
-          }}
-        />
-        <SideNav.Nav defaultSelected="home">
-          <NavItem eventKey="home">
-            <NavIcon>
-              <i className="fa fa-fw fa-home" style={{ fontSize: "1.75em" }} />
-            </NavIcon>
-            <NavText>Pacientes</NavText>
-          </NavItem>
-          <NavItem eventKey="placed orders">
-            <NavIcon>
-              <i
-                className="fa fa-fw fa-line-chart"
-                style={{ fontSize: "1.75em" }}
-              />
-            </NavIcon>
-            <NavText>placed orders</NavText>
-          </NavItem>
-        </SideNav.Nav>
-      </SideNav>
-    );
+    if(this.props.pacientes !== "1") {
+      return (
+        <SideNav expanded={this.state.isVisible} className="sidenavbar">
+          <SideNav.Toggle
+            onClick={() => {
+              this.setState({ isVisible: !this.state.isVisible });
+            }}
+          />
+          <SideNav.Nav defaultSelected="home">
+            <NavItem eventKey="home">
+              <NavIcon>
+                <i className="fa fa-fw fa-home" style={{ fontSize: "1.75em" }} />
+              </NavIcon>
+              <NavText>Pacientes</NavText>
+            </NavItem>
+            {this.props.pacientes.map(usuario => {
+              if(usuario.role === "user") {
+                console.log(usuario.name);
+                return (
+                  <NavItem eventKey="placed orders">
+                    <NavIcon>
+                      <i
+                        className="fa fa-fw fa-line-chart"
+                        style={{ fontSize: "1.75em" }}
+                      />
+                    </NavIcon>
+                    <NavText>{usuario.name}</NavText>
+                  </NavItem>
+                );
+              }
+              return null;
+            })}
+          </SideNav.Nav>
+        </SideNav>
+      );
+    }
   }
 }
 
