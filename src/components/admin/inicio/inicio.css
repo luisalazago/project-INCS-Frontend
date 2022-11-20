@@ -45,11 +45,11 @@ h1 {
 
 .bc1 {
     font-size: xx-large;
-    width: 40%;
+    width: 30rem;
     background-color: blueviolet;
     border: 2px solid blueviolet;
     border-radius: 40px !important;
-    padding: 1%;
+    padding: 2%;
 }
 
 .bc1:hover {

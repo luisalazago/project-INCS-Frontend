@@ -1,0 +1,29 @@
+.window{
+    height: 100vh;
+    width: 100ch;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, max-content);
+}
+
+.buton_container{
+    position: absolute;
+    height: 25%;
+    width: 50%;
+    left: 25%;
+}
+
+.buton_acc{
+    height: inherit;
+    width: inherit;
+}
+
+.buton_img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+}
+
+.buton_acc:hover { transition: 1s; }
+.buton_acc:hover img { opacity: 0.5; transition: 1s;}

@@ -1,15 +1,18 @@
+import userEvent from "@testing-library/user-event";
 import { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Form } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Route, Routes, useHistory } from "react-router-dom";
+import { Route, Routes, useNavigate} from "react-router-dom";
 import CrearActiviades from "../crear_actividades/crear_actividades";
 import "./inicio.css";
 
-class Inicio extends Component {
-    render() {
-        const history = useHistory();
-        return(
+export function Inicio() {
+    const navigate = useNavigate();
+    const handlerActividad = (e) => {
+        navigate("/crear_actividades");
+    }
+    return(
             <div className="inicio">
                 <h1>¿Qué desea hacer?</h1>
                 <div className="pc">
@@ -23,7 +26,9 @@ class Inicio extends Component {
                                 descrito oprima el botón de abajo.
                             </Card.Text>
                             <div className="centrarbc1">
-                                <Button variant="primary" className="bc1" onClick={() => history.push("/crear_actividades")}>Crear Actividades</Button>
+                                <Form onSubmit={handlerActividad}>
+                                    <Button type="submit" variant="primary" className="bc1">Crear Actividades</Button>
+                                </Form>
                             </div>
                         </Card.Body>
                     </Card>
@@ -58,12 +63,7 @@ class Inicio extends Component {
                         </Card.Body>
                     </Card>
                 </div>
-                <Routes>
-                    <Route path="/crear_actividades" element={<CrearActiviades/>}/>
-                </Routes>
+                
             </div>
         );
     }
-}
-
-export default Inicio;

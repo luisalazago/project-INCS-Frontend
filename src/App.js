@@ -5,6 +5,9 @@ import { Register } from './components/register/register';
 import { AuthProvider } from './context/authContext';
 import { Home } from './components/home/home';
 import { ProtectedRoute } from './components/proute/protectedRoute';
+import Juego from './components/juego/inicio/juego';
+import Jugando from './components/juego/Juego/jugando';
+import JuegoTerm from './components/juego/terminado/terminado';
 
 function App() {
   return(
@@ -16,8 +19,11 @@ function App() {
               <Home/>
             </ProtectedRoute>
             } />
-          <Route path ='/login' element = {<Login/>} />
-          <Route path ='/register' element = {<Register/>} />
+          <Route path ='/login' element = {<Login/>}/>
+          <Route path ='/register' element = {<Register/>}/>
+          <Route path ='/juego' element = { <Juego/>}/>
+          <Route path ='/juego/jugar' element = { <Jugando numero={1}/>}/>
+          <Route path ='/juego/terminado' element = { <JuegoTerm/> }/>
         </Routes>
       </AuthProvider>
     </div>

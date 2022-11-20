@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
-import Inicio from "../admin/inicio/inicio";
+import CrearActiviades from "../admin/crear_actividades/crear_actividades";
+import { Inicio } from "../admin/inicio/inicio";
 import NavBar from "../admin/navbar/navbar";
 import SideNavBar from "../admin/sidebar/sidebar";
 import InicioP from "../paciente/inicio/inicio";
@@ -47,6 +48,7 @@ export function Home() {
                 <SideNavBar pacientes={!todos_usuarios ? "1" : todos_usuarios.users}/>
                 <Routes>
                     <Route path="/" element={<Inicio/>}/>
+                    <Route path="/crear_actividades" element={<CrearActiviades/>}/>
                 </Routes>
             </div>
         );
