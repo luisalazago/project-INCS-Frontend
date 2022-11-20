@@ -14,13 +14,16 @@ export function Register() {
         password:""
     });
 
+
     const navigate = useNavigate();
     const [error, setError] = useState();
     const url_get = "https://us-central1-atencion-conjunta-365122.cloudfunctions.net/create_user";
 
     const handleChange = ({target: {name, value}}) => {
         setUser({...user, [name]: value});
+        console.log(user)
     };
+
     
     const submitHandler = e => {
         e.preventDefault();
@@ -45,8 +48,11 @@ export function Register() {
             shadpw-md rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
                     <label htmlFor="rol" className="block text-gray-700 text-sm font-fold mb-2 text-center">Rol</label>
-                    <input type="rol" name="role" className="shadow appearance-none border rounded
-                    w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="admin-user" onChange={handleChange}/>
+                    <select className="form-select" name="role" aria-label="Default select example" onChange={handleChange}>
+                        <option>Seleccione el rol</option>
+                        <option value="admin">Administrador</option>
+                        <option value="user">Paciente</option>
+                    </select>
                 </div>
                 <div className="mb-4">
                     <label htmlFor="nombre" className="block text-gray-700 text-sm font-fold mb-2 text-center">Nombre</label>
