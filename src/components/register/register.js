@@ -28,7 +28,7 @@ export function Register() {
         setError('');
         try{
             axios.post(url_get, user)
-            navigate('/login');
+            navigate('/');
         }
         catch(error){
             setError(error.message);
@@ -36,7 +36,7 @@ export function Register() {
     };
     
     const handleLoginR = (e) => {
-        navigate('/login');
+        navigate('/');
     }
 
     return (
