@@ -4,7 +4,6 @@ import { Row, Col, Form } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Route, Routes, useNavigate} from "react-router-dom";
-import CrearActiviades from "../crear_actividades/crear_actividades";
 import "./inicio.css";
 
 export function Inicio() {
