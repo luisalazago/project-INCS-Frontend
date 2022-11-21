@@ -1,5 +1,4 @@
 .inicio {
-    padding-left: 10%;
     text-align: center;
     padding-top: 1%;
 }
@@ -10,6 +9,8 @@ h1 {
 
 .pc {
     padding-top: 3%;
+    padding-left: 10%;
+    text-align: center;
 }
 
 .c1 {
@@ -44,11 +45,11 @@ h1 {
 
 .bc1 {
     font-size: xx-large;
-    width: 40%;
+    width: 30rem;
     background-color: blueviolet;
     border: 2px solid blueviolet;
     border-radius: 40px !important;
-    padding: 1%;
+    padding: 2%;
 }
 
 .bc1:hover {
@@ -57,7 +58,7 @@ h1 {
 }
 
 .centrarbc2 {
-    padding-top: 1%;
+    padding-top: 5%;
 }
 
 .bc2 {

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
-import { Alert } from "../alert/alert";
 import axios from "axios";
 
 export function Login() {
@@ -39,10 +38,10 @@ export function Login() {
                 }
             }
             if(flag === true && admin === true){
-                navigate('/inicio');
+                navigate('/home');
             }
             else if(flag === true && admin === false){
-                navigate('/home');
+                navigate('/juego');
             }
         }
         catch (error) {
@@ -56,7 +55,6 @@ export function Login() {
 
     return (
         <div className="w-full max-w-xs m-auto">
-        {error && <Alert message={error}/>}
             <form onSubmit={handleSubmit} className="bg-white
             shadpw-md rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">

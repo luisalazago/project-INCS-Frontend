@@ -1,13 +1,17 @@
+import userEvent from "@testing-library/user-event";
 import { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Form } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Form } from "react-router-dom";
+import { Route, Routes, useNavigate} from "react-router-dom";
 import "./inicio.css";
 
-class Inicio extends Component {
-    render() {
-        return(
+export function Inicio() {
+    const navigate = useNavigate();
+    const handlerActividad = (e) => {
+        navigate("/crear_actividades");
+    }
+    return(
             <div className="inicio">
                 <h1>¿Qué desea hacer?</h1>
                 <div className="pc">
@@ -21,7 +25,9 @@ class Inicio extends Component {
                                 descrito oprima el botón de abajo.
                             </Card.Text>
                             <div className="centrarbc1">
-                                <Button variant="primary" className="bc1">Crear Actividades</Button>
+                                <Form onSubmit={handlerActividad}>
+                                    <Button type="submit" variant="primary" className="bc1">Crear Actividades</Button>
+                                </Form>
                             </div>
                         </Card.Body>
                     </Card>
@@ -37,6 +43,12 @@ class Inicio extends Component {
                                                 <Card.Text>
                                                     ¿Qué tipo de actividad desea ver?
                                                 </Card.Text>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected value="0">Todas</option>
+                                                    <option value="1">Fácil</option>
+                                                    <option value="2">Intermedio</option>
+                                                    <option value="3">Difícil</option>
+                                                </select>
                                             </Card.Body>
                                         </Card>
                                     </div>
@@ -50,9 +62,7 @@ class Inicio extends Component {
                         </Card.Body>
                     </Card>
                 </div>
+                
             </div>
         );
     }
-}
-
-export default Inicio;

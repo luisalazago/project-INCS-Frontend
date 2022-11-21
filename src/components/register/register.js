@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
-import { Alert } from "../alert/alert";
 import axios from "axios";
 
 export function Register() {
@@ -43,7 +41,6 @@ export function Register() {
 
     return (
         <div className="w-full max-w-xs m-auto">
-        {error && <Alert message={error}/>}
             <form onSubmit={submitHandler} className="bg-white
             shadpw-md rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">

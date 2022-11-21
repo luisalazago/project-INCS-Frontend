@@ -1,0 +1,26 @@
+.navbar {
+    background-color: #F3795E !important;
+    color: black;
+    justify-content: center;
+}
+
+.bienvenido {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-left: 3%;  
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.profile_icon {
+    padding-left: 1%;
+}
+
+.homeP {
+    padding-left: 2%;
+    width: 10%;
+}
