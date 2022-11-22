@@ -59,6 +59,13 @@ class Jugando extends Component {
                     img3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
                     img4: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
                     correcta: 2
+                  },
+                  {
+                    img1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
+                    img2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
+                    img3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
+                    img4: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
+                    correcta: 2
                   }
                   ]
                 }

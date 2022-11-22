@@ -1,17 +1,21 @@
 import './navbar.css';
 import { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
+
 
 class NavBar extends Component {
   render() {
     return(
       <Navbar variant="dark" className="navbar">
         <div className="bienvenido">
-          <h2>Welcome {this.props.usuario}</h2>
+          <h2>Bienvenido</h2>
         </div>
-        <button onClick={this.props.logOut} className="blogout">
-          Logout
-        </button> 
+        <div className='Logout'>
+            <Link to="/">
+            Logout
+            </Link>
+        </div>
       </Navbar>
     );
   }

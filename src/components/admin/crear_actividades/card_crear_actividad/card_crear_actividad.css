@@ -1,0 +1,47 @@
+.card_crear_actividades {
+    padding-left: 10rem;
+    width: 90rem;
+}
+
+.centrar_card {
+    padding-top: 1rem;
+}
+
+.input_card {
+    padding-top: 0.5rem;
+}
+
+.card_titulo {
+    padding-top: 1rem;
+}
+
+.centrar_button {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.card_button {
+    font-size: xx-large;
+    border-radius: 30px;
+    height: 4.5rem;
+    width: 50rem;
+}
+
+.card_button:hover {
+    background-color: #4DA455;
+    border: 1px solid #4DA455;
+    transition-duration: 0.15s;
+}
+
+.inicio_button {
+    font-size: x-large;
+}
+
+.centrar_button2 {
+    text-align: right;
+    padding-top: 2rem;
+}
+
+.fila {
+    width: 100%;
+}

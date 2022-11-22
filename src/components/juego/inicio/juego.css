@@ -1,5 +1,5 @@
 .window{
-    height: 100vh;
+    height: 85vh;
     width: 100ch;
     display: grid;
     justify-content: center;
@@ -27,3 +27,8 @@
 
 .buton_acc:hover { transition: 1s; }
 .buton_acc:hover img { opacity: 0.5; transition: 1s;}
+
+
+.barra {
+    width:100%;
+}
