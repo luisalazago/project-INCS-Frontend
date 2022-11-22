@@ -11,6 +11,9 @@ class NavBar extends Component {
         <div className="bienvenido">
           <h2>Bienvenido</h2>
         </div>
+        <div>
+          <button className='botonRegreso'>Volver</button>
+        </div>
         <div className='Logout'>
             <Link to="/">
             Logout

@@ -44,9 +44,19 @@ export function InformacionPacientes () {
                 <NavBar/>
                 <SideNavBar pacientes={!todos_usuarios ? "1" : todos_usuarios.users}/>
                 <div className="informacion">
-                  <p>{userP.name}</p>
-                  <p>{userP.lastname}</p>
-                  <p>{userP.email}</p>
+                  <div className="bloque">
+                  <div className="imagenPaciente">
+                    <img className="imagenPaciente" src="https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg"></img>
+                  </div>
+                    <h2>Nombre</h2>
+                    <p>{userP.name}</p>
+                    <h2>Apellido</h2>
+                    <p>{userP.lastname}</p>
+                    <h2>Correo electronico</h2>
+                    <p>{userP.email}</p>
+                  </div>
+                  <div>
+                  </div>
                 </div>
             </div>
         );
