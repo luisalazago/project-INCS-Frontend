@@ -7,6 +7,7 @@ import SideNav, {
   NavIcon,
   NavText
 } from "@trendmicro/react-sidenav";
+import { Link } from "react-router-dom";
 
 class SideNavBar extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class SideNavBar extends React.Component {
                         style={{ fontSize: "1.75em" }}
                       />
                     </NavIcon>
-                    <NavText>{usuario.name}</NavText>
+                    <NavText><Link to = {`/informacion_paciente/${usuario.id}`}>{usuario.name}</Link></NavText>
                   </NavItem>
                 );
               }

@@ -2,9 +2,6 @@
     --bar-color: royalblue;
     --fill-size: 0%;
 }
-
-
-
 .progres_bar {
     position: relative;
     width: 200px;
@@ -13,7 +10,6 @@
     border-radius: 2cm;
     overflow: hidden;
 }
-
 .progres_bar::before {
     content: '';
     position: absolute;
@@ -21,7 +17,6 @@
     transform: translateX(-100%);
     animation: fill-bar 0.8s 0.3s ease-in-out forwards;
 }
-
 @keyframes fill-bar {
     to {
         transform: translateX(var(--fill-size));

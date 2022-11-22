@@ -1,20 +1,26 @@
 import './navbar.css';
-import { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link, useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
-class NavBar extends Component {
-  render() {
-    return(
-      <Navbar variant="dark" className="navbar">
-        <div className="bienvenido">
-          <h2>Bienvenido</h2>
-        </div>
-        <button className="blogout">
+export function NavBar() {
+  const navigate = useNavigate();
+  const handleHome = (e) => {
+    navigate("/home");
+  };
+  return(
+    <Navbar variant="dark" className="navbar">
+      <div className="bienvenido">
+        <h2>Bienvenido</h2>
+      </div>
+      <div className="centrar_boton_regreso">
+        <Button className='botonRegreso' onClick={handleHome}>Inicio</Button>
+      </div>
+      <div className='Logout'>
+        <Link to="/">
           Logout
-        </button> 
-      </Navbar>
-    );
-  }
+        </Link>
+      </div>
+    </Navbar>
+  );
 }
-
-export default NavBar;

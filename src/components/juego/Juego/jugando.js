@@ -28,7 +28,7 @@ class Jugando extends Component {
                   <img src={this.state.actividades[this.state.index].img4}></img>
                   <div name='actividad'>Imagen 4</div>
                 </div>
-                {this.state.index == this.state.actividades.length - 1 ?
+                {this.state.index === this.state.actividades.length - 1 ?
                   <Link class="button" onClick={() => this.finalizar()} to='/juego/terminado'>Terminar Actividad</Link>
                   : <div class="button" onClick={() => this.verificar()}>Siguiente</div>
                 }
@@ -59,6 +59,13 @@ class Jugando extends Component {
                     img3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
                     img4: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
                     correcta: 2
+                  },
+                  {
+                    img1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
+                    img2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
+                    img3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
+                    img4: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaON2BEnq49v9aLOstCRc00rDVni05mVi59hCDosk&s",
+                    correcta: 2
                   }
                   ]
                 }
@@ -81,13 +88,13 @@ class Jugando extends Component {
   }
 
   temp(){
-    if(this.state.actividades[this.state.index].correcta == this.state.actual){
+    if(this.state.actividades[this.state.index].correcta === this.state.actual){
       this.setState( {correcta: this.state.correcta+1} );
     }
   }
   verificar(){
     this.temp();
-    if(this.state.actual != 0){
+    if(this.state.actual !== 0){
       this.setState( {index: this.state.index+1,
                       actual: 0,
                       myClass: ["item", "item", "item", "item"]});

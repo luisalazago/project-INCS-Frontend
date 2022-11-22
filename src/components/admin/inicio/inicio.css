@@ -67,6 +67,7 @@ h1 {
     border-radius: 30px !important;
     padding: 2%;
     background-color: #4D8AA4;
+    border: none;
 }
 
 .row {

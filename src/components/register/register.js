@@ -9,8 +9,7 @@ export function Register() {
         nombre:"",
         apellido:"",
         email:"",
-        password:"",
-        is_active: false
+        password:""
     });
 
 
@@ -31,8 +30,9 @@ export function Register() {
             axios.post(url_get, user)
             navigate('/');
         }
-        catch(error){
-            setError(error.message);
+        catch(err){
+            setError(err.message);
+            console.log(error);
         }
     };
     
@@ -84,5 +84,3 @@ export function Register() {
         </div>
     );
 };
-
-

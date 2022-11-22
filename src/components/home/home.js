@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Inicio } from "../admin/inicio/inicio";
-import NavBar from "../admin/navbar/navbar";
+import { NavBar } from "../admin/navbar/navbar";
 import SideNavBar from "../admin/sidebar/sidebar";
 import "./home.css";
 

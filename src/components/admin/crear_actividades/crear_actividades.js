@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
-import NavBar from "../navbar/navbar";
+import { NavBar } from "../navbar/navbar";
 import SideNavBar from "../sidebar/sidebar";
 import { CardCrearActividades } from "./card_crear_actividad/card_crear_actividad";
 import "./crear_actividades.css";

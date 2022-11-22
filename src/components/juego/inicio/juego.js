@@ -1,11 +1,12 @@
 import './juego.css';
 import imagen from '../img/juego.jpg'
-import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { NavBar } from '../../admin/navbar/navbar';
 
-class Juego extends Component {
-  render() {
-    return(
+
+export function Juego () {
+  return (
+    <div className='barra'>
       <div className='window'>
         <div className='buton_container'>
           <Link className='buton_acc' to='jugar'>
@@ -13,8 +14,8 @@ class Juego extends Component {
           </Link>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Juego;

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -9,7 +8,6 @@ export function Login() {
         password:""
     });
 
-    const { login } = useAuth();
     const navigate = useNavigate();
     const [error, setError] = useState();
     const url_get = "https://us-central1-atencion-conjunta-365122.cloudfunctions.net/get_all_users"
@@ -44,8 +42,9 @@ export function Login() {
                 navigate('/juego');
             }
         }
-        catch (error) {
-            setError(error.message);
+        catch (err) {
+            setError(err.message);
+            console.log(error);
         }
     };
 

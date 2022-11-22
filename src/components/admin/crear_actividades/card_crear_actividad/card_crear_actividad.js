@@ -6,10 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import "./card_crear_actividad.css";
 
 export function CardCrearActividades() {
-    const fs = require("fs");
-    const file_user = fs.readFileSync("src\logged_user.txt", "utf-8");
-    const arr = file_user;
-    console.log(arr);
     const [actividad, setActividad] = useState({
         description: ""
     });
@@ -17,6 +13,7 @@ export function CardCrearActividades() {
         images: []
     });
 
+    const [error, setError] = useState();
     const navigate = useNavigate();
     const url_get = "https://us-central1-atencion-conjunta-365122.cloudfunctions.net/create_activity";
 
@@ -50,16 +47,7 @@ export function CardCrearActividades() {
 
     return(
         <div className="card_crear_actividades">
-            <div className="row fila">
-                <div className="col-8">
-                    <h1>Creación de Actividades</h1>
-                </div>
-                <div className="col-3">
-                    <div className="centrar_button2">
-                        <Button className="inicio_button" onClick={handleInicio}>Volver al Inicio</Button>
-                    </div>
-                </div>
-            </div>
+            <h1>Creación de Actividades</h1>
             <div className="centrar_card">
                 <form onSubmit={submitHandler}>
                     <Card className="card_actividad">
