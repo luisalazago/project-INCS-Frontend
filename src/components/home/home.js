@@ -4,6 +4,7 @@ import { useAuth } from "../../context/authContext";
 import CrearActiviades from "../admin/crear_actividades/crear_actividades";
 import { Inicio } from "../admin/inicio/inicio";
 import NavBar from "../admin/navbar/navbar";
+import { useNavigate } from "react-router-dom";
 import SideNavBar from "../admin/sidebar/sidebar";
 import InicioP from "../paciente/inicio/inicio";
 import NavBarP from "../paciente/navbar/navbar";
@@ -11,8 +12,9 @@ import "./home.css";
 
 export function Home() {
     const {logout, loading} = useAuth();
+    const navigate = useNavigate();
     const handleLogout = async () => {
-        await logout();
+        navigate('/');
     }
     
     const temp = "admin";
