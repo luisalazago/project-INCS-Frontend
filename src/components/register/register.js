@@ -9,7 +9,8 @@ export function Register() {
         nombre:"",
         apellido:"",
         email:"",
-        password:""
+        password:"",
+        is_active: false
     });
 
 
