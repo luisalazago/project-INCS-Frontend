@@ -1,7 +1,6 @@
 import './juego.css';
 import imagen from '../img/juego.jpg'
 import { Link } from 'react-router-dom';
-import { NavBar } from '../../admin/navbar/navbar';
 
 
 export function Juego () {
