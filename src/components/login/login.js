@@ -38,7 +38,7 @@ export function Login() {
                 }
             }
             if(flag === true && admin === true){
-                navigate('/home/:' + user.email);
+                navigate('/home');
             }
             else if(flag === true && admin === false){
                 navigate('/juego');

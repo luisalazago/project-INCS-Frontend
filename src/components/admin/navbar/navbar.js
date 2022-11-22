@@ -7,9 +7,9 @@ class NavBar extends Component {
     return(
       <Navbar variant="dark" className="navbar">
         <div className="bienvenido">
-          <h2>Welcome {this.props.usuario}</h2>
+          <h2>Bienvenido</h2>
         </div>
-        <button onClick={this.props.logOut} className="blogout">
+        <button className="blogout">
           Logout
         </button> 
       </Navbar>

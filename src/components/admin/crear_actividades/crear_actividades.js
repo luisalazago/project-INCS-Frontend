@@ -26,9 +26,7 @@ export function CrearActiviades() {
         <div className="actividades">
             <NavBar/>
             <SideNavBar pacientes={!todos_usuarios ? "1" : todos_usuarios.users}/>
-            <Routes>
-                <Route path="/crear_actividades" element={<CardCrearActividades/>}/>
-            </Routes>
+            <CardCrearActividades/>
         </div>
     );
 }

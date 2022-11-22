@@ -14,7 +14,7 @@ function App() {
     <div className='bg-slate-300 h-screen text-black flex'>
       <AuthProvider>
         <Routes>
-          <Route path='/home/:id' element = {<Home/>} />
+          <Route path='/home' element = {<Home/>} />
           <Route path ='/' element = {<Login/>} />
           <Route path ='/register' element = {<Register/>} />
           <Route path = '/juego' element = {<Juego/>}/>
